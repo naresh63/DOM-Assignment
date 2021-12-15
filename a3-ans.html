@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM assign 3</title>
+     <style>
+         *{
+             box-sizing: border-box;
+             margin: 0px;
+             padding: 0px;
+         }
+         #container{
+             width:fit-content;
+             border:1px solid rgb(119, 117, 117);
+             background-color:rgb(59, 58, 58);
+             display: flex;
+             align-items: flex-end;
+             transform: rotate(0deg);
+            color:white;
+         }
+        
+         #page{
+             min-height:80vh;
+             width:700px;
+             background-color: #fff;
+             padding:80px;
+             color:black;
+         }
+         /* aside navbar */
+         ul{
+             list-style: none;
+         }
+         /* top menu button */
+         #nav{
+            height:70px;
+             width:70px;
+             border-bottom-right-radius: 100%; 
+            position:absolute;
+            z-index: 3;
+            background-color:#FF8879 ; 
+            cursor: pointer;
+            display:block;
+         }
+         #close{
+             height:70px;
+             width:70px;
+             border-bottom-right-radius: 100%;
+             background-color:#FF8879 ; 
+              border:1px solid white;
+             position:absolute;
+             display:none;
+             cursor: pointer;
+             z-index: 2;
+         }
+        #aside{
+            display:none;
+            padding:10px;
+        }
+      .navBox{
+          position:absolute;
+          top:0px;
+          left:0px;
+      }
+
+     </style>
+</head>
+<body>
+    <div class="navBox">
+        <div  id="nav" onclick="rotate()"> MENU</div>
+        <button id="close" onclick="closeMenu()">X</button>
+    </div>
+     <div id="container"> <!--container is parent and aside ,page is children -->
+        <aside id="aside">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </aside>
+      
+       <div id="page">
+        
+      <h3>Lorem ipsum dolor sit amet.</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut expedita eveniet ducimus laboriosam natus magnam modi blanditiis suscipit explicabo consequuntur quis commodi cumque, ea labore ipsa sint, tenetur cum aspernatur enim magni aperiam iure obcaecati! Aliquam praesentium omnis labore necessitatibus esse ipsum nemo velit, ipsam dolore, voluptas maxime sequi iste.</p>
+      <img src="https://media.istockphoto.com/photos/cute-kitten-in-a-bed-picture-id1069317442?b=1&k=20&m=1069317442&s=170667a&w=0&h=3idD5gaMlTzN8xBJOBf1wKX-04QVbeFpbrMjKaRszNo=" width="350" height="180"  >
+       </div>
+    </div>
+    <script>
+        let cont = document.getElementById('container');
+        let closeBtn = document.getElementById('close');
+        let menuBtn = document.getElementById('nav');
+        let asideMenu =document.getElementById('aside');
+        // rotate page functionality
+        function rotate(){
+          cont.style.transform="rotate(-10deg)";
+          closeBtn.style.display="block";
+          menuBtn.style.display="none";
+          asideMenu.style.display="block";
+        }
+        // close button functionality
+        function closeMenu(){
+           cont.style.transform="rotate(0deg)"; 
+           menuBtn.style.display="block";
+           closeBtn.style.display="none";
+           asideMenu.style.display="none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM assign. 5</title>
+    <style>
+        #img1{
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" id="img1" alt="#">
+
+    <script>
+        let image =document.getElementById('img1');
+        setTimeout(
+            function(){
+                image.style.opacity="0.2";
+            },1000);
+            setTimeout(
+            function(){
+                image.style.opacity="0.4";
+            },2000);
+            setTimeout(
+            function(){
+                image.style.opacity="0.6";
+            },3000);
+            setTimeout(
+            function(){
+                image.style.opacity="0.8";
+            },4000);
+            setTimeout(
+            function(){
+                image.style.opacity="1.0";
+            },5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM assignment 4</title>
+    <style>
+        .container{
+            border:1px solid black;
+            display:flex;
+            width:max-content;
+            height:30px;
+        }
+        #entry1{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="entry1">
+        <img src="https://img.icons8.com/ios-glyphs/50/000000/search.png" id="searchBtn" onclick="searchBox()"/>
+    </div>
+   
+    <script>
+        function searchBox(){
+            console.log('hello')
+            let inputFld =document.getElementById('entry1');
+            if(inputFld.style.display==="none"){
+                inputFld.style.display="block"; 
+            }else{
+                inputFld.style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>

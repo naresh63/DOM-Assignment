@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 assign DOM </title>
+    <style>
+        
+        .container{
+            display: flex;
+        }
+ .circle{
+     border:1px solid black;
+     width:30px;
+     height:30px;
+     border-radius: 50%;
+      text-align: center;
+ }
+ .circle p{
+     margin-top: 5px;
+ }
+ .divline{
+     border-top:1px solid grey;
+     width:50px;
+     height:2px;
+     margin-top:14px;
+ }
+ .button-Cont{
+     width:300px;
+     display: flex;
+     justify-content: space-around;
+ }
+ button{
+    background-color: #3d77b6;
+    color: white;
+    border:1px solid white;
+    padding:8px;
+    border-radius: 5px;
+ }
+ #prevbtn:disabled{
+     background-color:#dddddd;
+ }
+ #nextbtn:disabled{
+    background-color:#dddddd;  
+ }
+ #div1{
+     border-color:blue;
+ }
+ #div2,#div3,#div4{
+     background-color:white;
+ }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div id="div1" class="circle">1</div>
+     <div class="divline" id="divline1"></div>
+     <div id="div2" class="circle">2</div>
+     <div class="divline" id="divline2"></div>
+     <div id="div3" class="circle">3</div>
+     <div class="divline" id="divline3"></div>
+     <div id="div4" class="circle">4</div>
+    </div>
+    <br>
+    <div class="button-Cont">
+        <button onclick="prev()" id="prevbtn">prev</button> 
+        <button onclick="next()" id="nextbtn">next</button>
+    </div>
+    
+    <script>
+      //  div circle
+     let d1 = document.getElementById('div1');
+     let d2 =  document.getElementById('div2');
+     let d3 =  document.getElementById('div3');
+     let d4 =  document.getElementById('div4');
+     // div line
+    let l1 = document.getElementById('divline1');
+    let l2 = document.getElementById('divline2');
+    let l3 = document.getElementById('divline3');
+     let c = 1;
+     // prev button 
+     let p =document.getElementById('prevbtn');
+      p.disabled=true;
+     // next button
+     let n = document.getElementById('nextbtn');
+      
+     // next functionality
+     function next(){
+        if(c===1){
+        d2.style.borderColor="blue";
+       l1.style.backgroundColor="blue";
+        n.disabled = false;
+        p.disabled =false; 
+       c++;
+        }
+         else if(c===2){
+            d3.style.borderColor="blue";
+            l2.style.backgroundColor="blue";
+             n.disabled = false;
+            c++;
+        }else if(c===3){
+            d4.style.borderColor="blue";
+            l3.style.backgroundColor="blue";
+           n.disabled = true;
+            c++;
+        }else{
+            console.log("")
+        }
+    }
+    // prev functionality
+     function prev(){
+      if(c===4){
+          d4.style.borderColor="grey";
+          l3.style.backgroundColor="grey";
+          p.disabled=false;
+          n.disabled= false;
+          c--;
+      }else if(c===3){
+          d3.style.borderColor="grey";
+          l2.style.backgroundColor="grey";
+          p.disabled=false;
+        c--;
+      }else if(c===2){
+          d2.style.borderColor="grey";
+          l1.style.backgroundColor="grey";
+          p.disabled=true;
+
+          c--;
+      }else {
+          console.log("")
+      }
+
+     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assgn.1</title>
+ <style>
+     .container{
+         display:flex;
+        }
+      img{
+        border:1px solid black;
+         width:50px;
+         height:200px;
+         border-radius: 20px; 
+         object-fit: cover; 
+         margin-left:10px;
+      }
+      #img1{
+         width:50px;
+     }
+     #img2{
+        width:50px;
+     }
+     #img3{
+        width:50px;
+     }
+     #img4{
+        width:50px;
+     }
+     #img5{
+        width:50px;
+     }
+ </style>
+</head>
+<body>
+    <div class="container">
+            <img src="https://media.istockphoto.com/photos/world-environment-day-concept-picture-id1177957577?b=1&k=20&m=1177957577&s=170667a&w=0&h=qo7VrRrkEUs6o2-cv_Fk7T_hC-i7hZia57yuWl_74bM=" id="img1" onclick="big1()">
+            <img src="https://media.istockphoto.com/photos/falling-autumn-leaves-picture-id697637108?b=1&k=20&m=697637108&s=170667a&w=0&h=K-dYcBpbOkxnCAuS-2-a4hBesNhGI9D9YRyNxDMB4Oc=" id="img2" onclick="big2()">
+            <img src="https://media.istockphoto.com/photos/abstract-texture-of-oxidated-copper-in-the-copper-mine-picture-id505863634?b=1&k=20&m=505863634&s=170667a&w=0&h=cQwaudu66ZfZKXnJ01m8raz9uhHulj-M-PjB3Q0rxqw=" id="img3" onclick="big3()">
+            <img src="https://media.istockphoto.com/photos/aerial-godafoss-waterfall-in-iceland-picture-id1174559518?b=1&k=20&m=1174559518&s=170667a&w=0&h=jx08kS2MGG6LkVrPTR7t_yP--OWwfD0sCTMV16eIp8U=" id="img4" onclick="big4()">
+            <img src="https://images.unsplash.com/photo-1620914854125-67a1981aae6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlJTIwaW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" id="img5" onclick="big5()">
+    </div>
+    <script>
+        let imgBig1 = document.getElementById('img1');
+        let imgBig2 = document.getElementById('img2');
+        let imgBig3 = document.getElementById('img3');
+        let imgBig4 = document.getElementById('img4');
+        let imgBig5 = document.getElementById('img5');
+        // img 1
+ function big1(){
+     imgBig1.style.width="200px";
+     imgBig2.style.width="50px";
+     imgBig3.style.width="50px";
+     imgBig4.style.width="50px";
+     imgBig5.style.width="50px";
+
+ }
+ // img 2
+ function big2(){
+    imgBig1.style.width="50px";
+     imgBig2.style.width="200px";
+     imgBig3.style.width="50px";
+     imgBig4.style.width="50px";
+     imgBig5.style.width="50px";
+ }
+ // img 3
+ function big3(){
+    imgBig1.style.width="50px";
+     imgBig2.style.width="50px";
+     imgBig3.style.width="200px";
+     imgBig4.style.width="50px";
+     imgBig5.style.width="50px";
+ }// img 4
+ function big4(){
+    imgBig1.style.width="50px";
+     imgBig2.style.width="50px";
+     imgBig3.style.width="50px";
+     imgBig4.style.width="200px";
+     imgBig5.style.width="50px";
+
+ }// img 5
+ function big5(){
+    imgBig1.style.width="50px";
+     imgBig2.style.width="50px";
+     imgBig3.style.width="50px";
+     imgBig4.style.width="50px";
+     imgBig5.style.width="200px";
+ }
+    </script>
+</body>
+</html>
